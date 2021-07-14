@@ -449,6 +449,7 @@ html{
 	 flex-direction: column;
 	 border-radius: 20px;
 	 transition: 0.25s;
+	 z-index: 2;
 }
  .invoice .shipping-items {
 	 padding: 10px 0;
