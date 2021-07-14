@@ -27,7 +27,7 @@ html{
 }
  .banner {
 	 position: relative;
-	 height: 100vh;
+	 height: 153vh;
 	 width: 100vw;
 	 background: -webkit-gradient(linear, right top, left top, from(#8942a8), to(#ba382f));
 	 background: linear-gradient(to left, #8942a8, #ba382f);
@@ -217,8 +217,12 @@ html{
 	 transform: translateY(35px);
 }
  .card .img-container img {
-	 width: 100%;
-	 align-self: center;
+	width: 100%;
+    border-radius: 24px;
+    align-self: center;
+    margin-top: 6px;
+	/* width: 100%;
+	 align-self: center; */
 }
  .card .img-container .out-of-stock-cover {
 	 position: absolute;

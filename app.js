@@ -290,16 +290,12 @@ function buy(handler) {
 }
 function gotowhatsapp() {
         
-    var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
-    var email = document.getElementById("email").value;
-    var service = document.getElementById("service").value;
+    var name = document.getElementByClassName("item-names").innerHTML;
+    var price = document.getElementsByClassName("item-price").innerText;
 
     var url = "https://wa.me/919890525387?text=" 
     + "Name: " + name + "%0a"
-    + "Phone: " + phone + "%0a"
-    + "Email: " + email  + "%0a"
-    + "Service: " + service; 
+    + "Phone: " + price + "%0a"; 
 
     window.open(url, '_blank').focus();
 }
@@ -398,7 +394,6 @@ function Banner() {
   <div class='main-cart'>${DisplayProducts()}</div>
 
   <div class='nav'>
-    
     <button onclick='sideNav(1)'><i class='fas fa-shopping-cart' style='font-size:2rem;'></i></button>
     <span class= 'total-qty'>0</span>
   </div>
