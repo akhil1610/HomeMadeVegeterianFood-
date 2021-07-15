@@ -302,7 +302,7 @@ function gotowhatsapp() {
     // var name = document.getElementByClassName("item-names").innerHTML;
     // var price = document.getElementsByClassName("item-price").innerText;
 
-    var url = "https://wa.me/919890525387?text=" 
+    var url = "https://wa.me/60173934825?text=" 
     + "Item Name:%20 " + itemNames + "%0a"
     + "Item Price: " + itemPrices + "%0a"
     + "Total Amount: " + toPay + "%0a";
