@@ -550,6 +550,11 @@ html{
 	 .invoice .order {
 		 width: 80%;
 	}
+	.side-nav .final {
+		position: absolute;
+		
+		bottom: 14%;
+   }
 	 /* .nav {
 		 width: 576px;
 		 height: 4rem;
