@@ -101,12 +101,12 @@ const productDetails = [
     },
     {
         name: "Gulab Jamun",
-        price: 5,
+        price: 2,
         imageUrl: "assets/images/12.jpeg",
         qty: 35,
         heading: "Gulab jamun",
         des:
-            "Rm 5 for 3 pc's"
+            " 1 pic -  Rm 2"
     },
     {
         name: "Carrot Paratha",
@@ -175,7 +175,7 @@ function addItem(event) {
     let price = parseFloat(
         btnClicked
             .getElementsByClassName("product-price")[0]
-            .innerText.replace("$ ", "")
+            .innerText.replace("RM ", "")
     );
     let imgSrc = btnClicked.getElementsByClassName("product-img")[0].src;
     SwitchBtns(btnClicked);
@@ -295,7 +295,7 @@ function gotowhatsapp() {
         return `${item.qty} x ${item.name}`;
     });
     let itemPrices = cartDetails.map((item) => {
-        return `$ ${item.price * item.qty}`;
+        return `RM ${item.price * item.qty}`;
     });
     var url = "https://wa.me/60173934825?text=" 
     + "Item Name:%20 " + itemNames + "%0a"
@@ -370,7 +370,7 @@ function Product(product = {}) {
       <p>${des}</p>
     </div>
     <div class='purchase'>
-      <p class='product-price'>$ ${price}</p>
+      <p class='product-price'>RM ${price}</p>
       <span class='btn-add'>${AddBtn()}</span>
     </div>
   </div>
@@ -386,7 +386,7 @@ function CartItems(cartItem = {}) {
   </div>
   <strong class='name'>${name}</strong>
   <span class='qty-change'>${QtyBtn(qty)}</span>
-  <p class='price'>$ ${price * qty}</p>
+  <p class='price'>RM ${price * qty}</p>
   <button onclick='removeItem(this)'><i class='fas fa-trash'></i></button>
 </div>`;
 }
@@ -422,11 +422,13 @@ function CartSideNav() {
   <h2>Cart</h2>
   <div class='cart-items'></div>
   <div class='final'>
-    <strong>Total: $ <span class='total'>0</span>.00/-</strong>
+    <strong>Total: RM <span class='total'>0</span>.00/-</strong>
     <div class='action'>
-      <button onclick='buy(1)' class='btn buy'>Purchase <i class='fas fa-credit-card' style='color:#6665dd;'></i></button>
+      <button onclick='buy(1)' class='btn buy'>Place Order <i class='fas fa-credit-card' style='color:#6665dd;'></i></button>
       <button onclick='clearCart()' class='btn clear'>Clear Cart <i class='fas fa-trash' style='color:#bb342f;'></i></button>
-    </div>
+      
+      </div>
+      <span class="exc-mand">* Excluding delivery charges</span>
   </div>
 </div>`;
 }
@@ -437,7 +439,7 @@ function Purchase() {
         return `<span>${item.qty} x ${item.name}</span>`;
     });
     let itemPrices = cartDetails.map((item) => {
-        return `<span>$ ${item.price * item.qty}</span>`;
+        return `<span>RM ${item.price * item.qty}</span>`;
     });
     return `
 <div class='invoice'>
@@ -449,7 +451,7 @@ function Purchase() {
   <div class='payment'>
     <em>payment</em>
     <div>
-      <p>total amount to be paid:</p><span class='pay'>$ ${toPay}</span>
+      <p>total amount to be paid:</p><span class='pay'>RM ${toPay}</span>
     </div>
   </div>
   <div class='order'>
@@ -468,12 +470,13 @@ function OrderConfirm() {
     <em>your order has been placed</em>
     <p>Your order-id is : <span>${orderId}</span></p>
     <pYou can provide delivery address on whatsapp number below order details.</p>
-    <p>You can pay <span>$ ${totalCost}</span> by card or any online transaction method after the delivery.</p>
-  </div>
+    </div>
   <button onclick='okay(event)' class='btn-ok'>okay</button>
 </div>`;
 }
 //}
+{/* <p>You can pay <span>$ ${totalCost}</span> by card or any online transaction method after the delivery.</p> */}
+  
 
 //updates Ui components {
 function DisplayProducts() {
