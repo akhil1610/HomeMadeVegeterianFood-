@@ -27,7 +27,7 @@ html{
 }
  .banner {
 	 position: relative;
-	 height: 153vh;
+	 height: 100vh;
 	 width: 100vw;
 	 background: -webkit-gradient(linear, right top, left top, from(#8942a8), to(#ba382f));
 	 background: linear-gradient(to left, #8942a8, #ba382f);
