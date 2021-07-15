@@ -1,7 +1,112 @@
 const productDetails = [
     {
+        name: "Hara Bhara kabab",
+        price: 2,
+        imageUrl:
+            "assets/images/hara-bhara-kabab.jpg",
+        qty: 10,
+        heading: "Hara Bhara kabab",
+        des:
+            "Hara Bhara kabab 1pcs"
+    },
+    {
+        name: "Buff Vada",
+        price: 2,
+        imageUrl:
+            "assets/images/buff-vada.jpg",
+        qty: 10,
+        heading: "Buff Vada",
+        des:
+            "Buff Vada 1pcs"
+    },
+    {
+        name: "Aloo Vada",
+        price: 1.5,
+        imageUrl:
+            "assets/images/aloo-bonda.jpg",
+        qty: 10,
+        heading: "Aloo Vada",
+        des:
+            "Aloo Vada"
+    },
+    {
+        name: "Mini Samosa ",
+        price: 1.5,
+        imageUrl:
+            "assets/images/mini-samos.png",
+        qty: 10,
+        heading: "Mini Samosa",
+        des:
+            "Mini Samosa"
+    },
+    {
+        name: "Matar Samosa",
+        price: 1.5,
+        imageUrl:
+            "assets/images/maxresdefault.jpg",
+        qty: 10,
+        heading: "Matar Samosa",
+        des:
+            "Matar Samosa"
+    },
+    {
+        name: "Cheese Corn Tikki",
+        price: 5,
+        imageUrl:
+            "assets/images/CheeseCornTikki.jpg",
+        qty: 10,
+        heading: "Cheese Corn Tikki",
+        des:
+            "Cheese Corn Tikki 2pcs"
+    },
+    {
+        name: "Paneer Tikki",
+        price: 5,
+        imageUrl:
+            "assets/images/Paneer_Tikkis.jpg",
+        qty: 10,
+        heading: "Paneer Tikki",
+        des:
+            "Paneer Tikki 2pcs"
+    },
+    {
+        name: "Aloo Tikki",
+        price: 1,
+        imageUrl:
+            "assets/images/Aloo-Tikki.jpg",
+        qty: 10,
+        heading: "Aloo Tikki",
+        des:
+            "Aloo Tikki"
+    },
+    {
+        name: "Chinese Spring Roll",
+        price: 1.5,
+        imageUrl:
+            "assets/images/Chinese-Spring-Roll.jpg",
+        qty: 10,
+        heading: "Chinese Spring Roll",
+        des:
+            "Chinese Spring Roll"
+    },
+    {
+        name: "Khajoor Roll",
+        price: 1.5,
+        imageUrl:
+            "assets/images/KhajoorRoll.jpg",
+        qty: 10,
+        heading: "Khajoor Roll",
+        des:
+            "Khajoor Roll"
+    },
+
+
+
+
+
+    {
         name: "Aloo sabji",
-        price: 10,
+        price: 5,
         imageUrl:
             "assets/images/1.jpeg",
         qty: 10,
@@ -11,30 +116,29 @@ const productDetails = [
     },
     {
         name: "Methi thepla",
-        price: 20,
+        price: 1.5,
         imageUrl: "assets/images/2.jpeg",
         qty: 15,
         heading: "Methi thepla",
         des:
-            "Methi thepla."
+            "Methi thepla 1pcs."
     },
     {
-        name: "Paubhaji",
-        price: 40,
+        name: "Pav Bhaji",
+        price: 10,
         imageUrl: "assets/images/3.jpeg",
         qty: 15,
-        heading: "Paubhaji",
-        des:
-            "Paubhaji."
+        heading: "Pav Bhaji",
+        des:"Pav Bhaji 2pcs."
     },
     {
         name: "Bitroot Paratha",
-        price: 40,
+        price: 2.5,
         imageUrl: "assets/images/4.jpeg",
         qty: 15,
         heading: "Bitroot Paratha",
         des:
-            "Bitroot Paratha."
+            "Bitroot Paratha 1pcs."
     },
     {
         name: "Carrot halva",
@@ -47,21 +151,21 @@ const productDetails = [
     },
     {
         name: "Beetroot Halwa",
-        price: 40,
+        price: 10,
         imageUrl: "assets/images/6.jpeg",
         qty: 15,
         heading: "Beetroot Halwa",
         des:
-            "Beetroot Halwa"
+            "Beetroot Halwa 50gm"
     },
     {
         name: "Vada pav",
-        price: 40,
+        price: 10,
         imageUrl: "assets/images/7.jpeg",
         qty: 15,
         heading: "Vada pav",
         des:
-            "Vada pav"
+            "Vada pav 2pcs"
     },
     {
         name: "Puri",
@@ -70,11 +174,11 @@ const productDetails = [
         qty: 15,
         heading: "Puri",
         des:
-            "Puri."
+            "Puri 500gm."
     },
     {
         name: "dabeli",
-        price: 40,
+        price: 7,
         imageUrl: "assets/images/9.jpeg",
         qty: 15,
         heading: "dabeli",
@@ -83,16 +187,16 @@ const productDetails = [
     },
     {
         name: "Crispi Bhakhri",
-        price: 19,
+        price: 2,
         imageUrl: "assets/images/10.jpeg",
         qty: 20,
         heading: "Crispi Bhakhri",
         des:
-            "Crispi Bhakhri"
+            "Crispi Bhakhri 1pcs"
     },
     {
         name: "Ragda Petis",
-        price: 106600,
+        price: 7,
         imageUrl: "assets/images/11.jpeg",
         qty: 35,
         heading: "Ragda Petis",
@@ -101,39 +205,30 @@ const productDetails = [
     },
     {
         name: "Gulab Jamun",
-        price: 2,
+        price: 5,
         imageUrl: "assets/images/12.jpeg",
         qty: 35,
         heading: "Gulab jamun",
         des:
-            " 1 pic -  Rm 2"
+            "Gulab jamun 3ps"
     },
     {
         name: "Carrot Paratha",
-        price: 10,
+        price: 2,
         imageUrl: "assets/images/13.jpeg",
         qty: 35,
         heading: "Carrot Paratha",
         des:
-            "Carrot Paratha"
+            "Carrot Paratha 1pcs"
     },
     {
         name: "Carrot halva ",
-        price: 106600,
+        price: 5,
         imageUrl: "assets/images/14.jpeg",
         qty: 35,
         heading: " Carrot halva",
         des:
             "Carrot halva RM 5."
-    },
-    {
-        name: "dabeli",
-        price: 10,
-        imageUrl: "assets/images/15.jpeg",
-        qty: 35,
-        heading: "Dabeli",
-        des:
-            "Dabeli."
     },
     {
         name: "Poha Chevda",
@@ -142,7 +237,7 @@ const productDetails = [
         qty: 35,
         heading: "Poha Chevda",
         des:
-            "Poha Chevda Rm 30-500gm."
+            "Poha Chevda 500gm."
     },
     {
         name: "Methi Papad",
@@ -155,12 +250,12 @@ const productDetails = [
     },
     {
         name: "Chili Pokoda",
-        price: 60,
+        price: 5,
         imageUrl: "assets/images/18.jpeg",
         qty: 35,
         heading: "Chili Pokoda",
         des:
-            "Chili Pokoda Rm 5 - 2 pcs."
+            "Chili Pokoda 2 pcs."
     }
 ];
 const cartDetails = [];
