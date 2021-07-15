@@ -289,13 +289,24 @@ function buy(handler) {
         : "";
 }
 function gotowhatsapp() {
-        
-    var name = document.getElementByClassName("item-names").innerHTML;
-    var price = document.getElementsByClassName("item-price").innerText;
+     
+    let toPay = document.getElementsByClassName("total")[0].innerText;
+    let itemNames = cartDetails.map((item) => {
+        return `${item.qty} x ${item.name}`;
+    });
+    let itemPrices = cartDetails.map((item) => {
+        return `$ ${item.price * item.qty}`;
+    });
+    
+
+    // var name = document.getElementByClassName("item-names").innerHTML;
+    // var price = document.getElementsByClassName("item-price").innerText;
 
     var url = "https://wa.me/919890525387?text=" 
-    + "Name: " + name + "%0a"
-    + "Phone: " + price + "%0a"; 
+    + "Item Name:%20 " + itemNames + "%0a"
+    + "Item Price: " + itemPrices + "%0a"
+    + "Total Amount: " + toPay + "%0a";
+    // + "Phone: " + price + "%0a"; 
 
     window.open(url, '_blank').focus();
 }
@@ -303,7 +314,7 @@ function order() {
     let invoice = document.getElementsByClassName("invoice")[0];
     invoice.style.height = "500px";
     invoice.style.width = "400px";
-    invoice.innerHTML = OrderConfirm();
+    invoice.innerHTML = gotowhatsapp();//whatsapp
     ToggleBackBtns();
     Stocks();
     clearCart();
