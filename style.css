@@ -36,11 +36,19 @@ button {
 	width: 100vw;
 	/* background: -webkit-gradient(linear, right top, left top, from(#8942a8), to(#ba382f)); */
 	/* background: linear-gradient(to left, #8942a8, #ba382f); */
-	/* overflow: hidden; */
+	overflow-x: hidden;
 }
 
 .exc-mand {
 	margin-top: 9px;
+}
+.adr-my{
+	color: rgb(255, 255, 255);
+	display:inline-grid;
+}
+.be{
+	margin: 5px 10px 0px 10px;
+    font-weight: bolder;
 }
 
 .nav-head {

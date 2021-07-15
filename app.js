@@ -289,7 +289,8 @@ function buy(handler) {
         : "";
 }
 function gotowhatsapp() {
-     
+    let CName = document.getElementById("CName").value;
+    let CAddress = document.getElementById("CAddress").value;
     let toPay = document.getElementsByClassName("total")[0].innerText;
     let itemNames = cartDetails.map((item) => {
         return `${item.qty} x ${item.name}`;
@@ -300,16 +301,16 @@ function gotowhatsapp() {
     var url = "https://wa.me/60173934825?text=" 
     + "Item Name:%20 " + itemNames + "%0a"
     + "Item Price: " + itemPrices + "%0a"
-    + "Total Amount: " + toPay + "%0a";
-    // + "Phone: " + price + "%0a"; 
-
-    window.open(url, '_blank').focus();
-}
-function order() {
+    + "Total Amount: " + toPay + "%0a"
+    + "Name: " + CName + "%0a" 
+    + "Address: " + CAddress + "%0a"; 
     let invoice = document.getElementsByClassName("invoice")[0];
     invoice.style.height = "500px";
     invoice.style.width = "400px";
     invoice.innerHTML = OrderConfirm();//Invoice
+    window.open(url, '_blank').focus();
+}
+function order() {
     gotowhatsapp();//whatsapp
     ToggleBackBtns();
     Stocks();
@@ -444,26 +445,27 @@ function Purchase() {
     return `
 <div class='invoice'>
   <div class='shipping-items'>
-    <div class='item-names'>${itemNames.join("")}</div>
-    <div class='items-price'>${itemPrices.join("+")}</div>
+  <p>total amount to be paid:</p><span class='pay'>RM ${toPay}</span>
   </div>
 <hr>
-  <div class='payment'>
-    <em>payment</em>
-    <div>
-      <p>total amount to be paid:</p><span class='pay'>RM ${toPay}</span>
-    </div>
-  </div>
+<div class="adr-my">
+<label class="be" for="fname">First name:</label>
+<input id="CName" class="be CName" type="text" name="fname"><br><br>
+<label class="be" for="fname">Full Address:</label>
+<textarea id="CAddress" class="be CAddress" rows="4" cols="50" placeholder="Enter adress..."></textarea>
+</div>
   <div class='order'>
     <button onclick='order()' class='btn-order btn'>Order Now</button>
     <button onclick='buy(0)' class='btn-cancel btn'>Cancel</button>
   </div>
 </div>`;
 }
+{/* <div class='item-names'>${itemNames.join("")}</div>
+<div class='items-price'>${itemPrices.join("+")}</div> */}
 
 function OrderConfirm() {
     let orderId = Math.round(Math.random() * 1000);
-    let totalCost = document.getElementsByClassName("total")[0].innerText;
+    // let totalCost = document.getElementsByClassName("total")[0].innerText;
     return `
 <div>
   <div class='order-details'>
