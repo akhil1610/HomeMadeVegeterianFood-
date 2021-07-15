@@ -297,11 +297,6 @@ function gotowhatsapp() {
     let itemPrices = cartDetails.map((item) => {
         return `$ ${item.price * item.qty}`;
     });
-    
-
-    // var name = document.getElementByClassName("item-names").innerHTML;
-    // var price = document.getElementsByClassName("item-price").innerText;
-
     var url = "https://wa.me/60173934825?text=" 
     + "Item Name:%20 " + itemNames + "%0a"
     + "Item Price: " + itemPrices + "%0a"
@@ -314,7 +309,8 @@ function order() {
     let invoice = document.getElementsByClassName("invoice")[0];
     invoice.style.height = "500px";
     invoice.style.width = "400px";
-    invoice.innerHTML = gotowhatsapp();//whatsapp
+    invoice.innerHTML = OrderConfirm();//Invoice
+    gotowhatsapp();//whatsapp
     ToggleBackBtns();
     Stocks();
     clearCart();
