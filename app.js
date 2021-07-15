@@ -467,8 +467,8 @@ function OrderConfirm() {
   <div class='order-details'>
     <em>your order has been placed</em>
     <p>Your order-id is : <span>${orderId}</span></p>
-    <p>your order will be delivered to you in 3-5 working days</p>
-    <p>you can pay <span>$ ${totalCost}</span> by card or any online transaction method after the products have been dilivered to you</p>
+    <pYou can provide delivery address on whatsapp number below order details.</p>
+    <p>You can pay <span>$ ${totalCost}</span> by card or any online transaction method after the delivery.</p>
   </div>
   <button onclick='okay(event)' class='btn-ok'>okay</button>
 </div>`;
