@@ -33,6 +33,13 @@ html{
 	 /* background: linear-gradient(to left, #8942a8, #ba382f); */
 	 /* overflow: hidden; */
 }
+.nav-head{
+    display: flex;
+    right: 0;
+    position: absolute;
+    margin: 9px 60px 0px 0px;
+    
+}
  .banner .stock-limit {
 	 position: absolute;
 	 top: 0;
@@ -538,6 +545,13 @@ html{
 	}
 	 .main-cart {
 		 overflow: scroll;
+	}
+	.nav-head {
+		display: flex;
+		right: 0;
+		font-size: 14px;
+		position: absolute;
+		margin: 15px 60px 0px 0px;
 	}
 }
  @media (max-width: 576px) {
