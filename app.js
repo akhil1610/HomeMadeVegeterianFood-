@@ -546,7 +546,7 @@ function Purchase() {
 <label class="be" for="fname">Name:</label>
 <input id="CName" class="be CName" type="text" name="fname"><br><br>
 <label class="be" for="fname">Full Address:</label>
-<textarea id="CAddress" class="be CAddress" rows="4" cols="50" placeholder="Enter adress..."></textarea>
+<textarea id="CAddress" class="be CAddress" rows="4" cols="50" placeholder="Enter address..."></textarea>
 <form>
  <span>Delivery Type</span><br/>
 
