@@ -41,6 +41,7 @@ button {
 
 .exc-mand {
 	margin-top: 9px;
+	color: black;
 }
 .adr-my{
 	color: rgb(255, 255, 255);
@@ -51,7 +52,14 @@ button {
     font-weight: bolder;
 	font-size: x-large;
 }
-
+.StickyContent {
+	flex: 1 1 auto;
+	overflow-y: scroll;
+	background: green;
+  }
+  .color-black{
+	  color: black;
+  }
 .nav-head {
 	display: flex;
 	right: 0;
@@ -392,7 +400,7 @@ button {
 
 .side-nav {
 	position: absolute;
-	background: #010101;
+	background: snow;
 	opacity: 0.95;
 	height: 100%;
 	width: 60%;
@@ -438,7 +446,7 @@ button {
 	font-size: 2rem;
 	font-weight: 900;
 	text-align: center;
-	color: rgba(255, 255, 255, 0.25);
+	color: rgba(235, 33, 33, 0.25);
 }
 
 .side-nav .cart-items .cart-item {
@@ -490,14 +498,14 @@ button {
 .side-nav .final .action .btn {
 	font-size: 1.2rem;
 	padding: 1rem 2rem;
-	border: 1px solid white;
+	border: 1px solid rgb(0, 0, 0);
 	margin-right: 20px;
 	border-radius: 10px;
 }
 
 .side-nav .final .action .btn:hover {
 	color: black;
-	box-shadow: inset 20em 0 0 0 white;
+	box-shadow: inset 20em 0 0 0 rgb(0, 0, 0);
 }
 
 .qty-change {

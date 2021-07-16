@@ -99,11 +99,6 @@ const productDetails = [
         des:
             "Khajoor Roll"
     },
-
-
-
-
-
     {
         name: "Aloo sabji",
         price: 5,
@@ -476,7 +471,8 @@ function Product(product = {}) {
 function CartItems(cartItem = {}) {
     let { name, price, imgSrc, qty } = cartItem;
     return `
-<div class='cart-item'>
+ 
+<div class='cart-item StickyContent '>
   <div class='cart-img'>
     <img src='${imgSrc}' alt='' />
   </div>
@@ -484,7 +480,8 @@ function CartItems(cartItem = {}) {
   <span class='qty-change'>${QtyBtn(qty)}</span>
   <p class='price'>RM ${price * qty}</p>
   <button onclick='removeItem(this)'><i class='fas fa-trash'></i></button>
-</div>`;
+</div>
+`;
 }
 // function Headers(){
 //     return `
@@ -514,14 +511,14 @@ function Banner() {
 function CartSideNav() {
     return `
 <div class='side-nav'>
-  <button onclick='sideNav(0)'><i class='fas fa-times'></i></button>
-  <h2>Cart</h2>
+  <button onclick='sideNav(0)'  class="color-black"><i class='fas fa-times'></i></button>
+  <h2 class="color-black">Cart</h2>
   <div class='cart-items'></div>
   <div class='final'>
-    <strong>Total: RM <span class='total'>0</span>.00/-</strong>
+    <strong class="color-black">Total: RM <span class='total'>0</span>.00/-</strong>
     <div class='action'>
-      <button onclick='buy(1)' class='btn buy'>Place Order <i class='fas fa-credit-card' style='color:#6665dd;'></i></button>
-      <button onclick='clearCart()' class='btn clear'>Clear Cart <i class='fas fa-trash' style='color:#bb342f;'></i></button>
+      <button onclick='buy(1)' class='btn buy color-black''>Place Order <i class='fas fa-credit-card' style='color:#6665dd;'></i></button>
+      <button onclick='clearCart()' class='btn clear  color-black''>Clear Cart <i class='fas fa-trash' style='color:#bb342f;'></i></button>
       
       </div>
       <span class="exc-mand">* Excluding delivery charges</span>
