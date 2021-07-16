@@ -67,6 +67,9 @@ hr{
     font-weight: bolder;
 	font-size: initial;
 }
+.trash-can{
+	margin-right: 17px;
+}
 .StickyContent {
 	flex: 1 1 auto;
 	overflow-y: scroll;
@@ -80,6 +83,9 @@ hr{
 	right: 0;
 	position: absolute;
 	margin: 9px 60px 0px 0px;
+}
+.aling-my{
+	
 }
 
 .banner .stock-limit {
@@ -469,7 +475,7 @@ hr{
 	width: 100%;
 	-webkit-box-align: center;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 	border-bottom: 1px solid whitesmoke;
 }
 

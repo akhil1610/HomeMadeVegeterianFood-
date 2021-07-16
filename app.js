@@ -429,6 +429,7 @@ function buy(handler) {
         : "";
 }
 function gotowhatsapp() {
+    let orderId;
     let CName = document.getElementById("CName").value;
     let CAddress = document.getElementById("CAddress").value;
     let deliveryOpt = document.querySelector('input[name="d"]:checked').value
@@ -440,12 +441,13 @@ function gotowhatsapp() {
         return `RM ${item.price * item.qty}`;
     });
     var url = "https://wa.me/60173934825?text=" 
+    + "Order No:%20 " + orderId + "%0a"
     + "Item Name:%20 " + itemNames + "%0a"
-    + "Item Price: " + itemPrices + "%0a"
-    + "Total Amount: " + toPay + "%0a"
-    + "Name: " + CName + "%0a" 
-    + "Address: " + CAddress + "%0a"
-    + "Delivery Type: " + deliveryOpt + "%0a"; 
+    + "Item Price:%20 " + itemPrices + "%0a"
+    + "Total Amount:%20 " + toPay + "%0a"
+    + "Name:%20 " + CName + "%0a" 
+    + "Address:%20 " + CAddress + "%0a"
+    + "Delivery Type:%20 " + deliveryOpt + "%0a"; 
     let invoice = document.getElementsByClassName("invoice")[0];
     invoice.style.height = "500px";
     invoice.style.width = "400px";
@@ -530,8 +532,8 @@ function CartItems(cartItem = {}) {
   </div>
   <strong class='name color-black'>${name}</strong>
   <span class='qty-change color-black'>${QtyBtn(qty)}</span>
-  <p class='price color-black'>RM ${price * qty}</p>
-  <button onclick='removeItem(this)' class="color-black"><i class='fas fa-trash'></i></button>
+  <p class='price color-black aling-my'>RM ${price * qty}</p>
+  <button onclick='removeItem(this)' class="color-black"><i class='fas fa-trash trash-can'></i></button>
 </div>
 `;
 }
@@ -620,19 +622,20 @@ function Purchase() {
 <div class='items-price'>${itemPrices.join("+")}</div> */}
 
 function OrderConfirm() {
-    let orderId = Math.round(Math.random() * 1000);
+    var orderId = Math.round(Math.random() * 1000);
     // let totalCost = document.getElementsByClassName("total")[0].innerText;
     return `
 <div>
   <div class='order-details'>
     <em>your order has been placed</em>
     <p>Your order-id is : <span>${orderId}</span></p>
-    <pYou can provide delivery address on whatsapp number below order details.</p>
+    
     </div>
   <button onclick='okay(event)' class='btn-ok'>okay</button>
 </div>`;
 }
 //}
+{/* <p>You can provide delivery address on whatsapp number below order details.</p> */}
 {/* <p>You can pay <span>$ ${totalCost}</span> by card or any online transaction method after the delivery.</p> */}
   
 
