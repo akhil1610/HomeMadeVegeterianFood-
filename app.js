@@ -69,6 +69,16 @@ const productDetails = [
         des:
             "Dahivada 1plate"
     },
+    {
+        name: "Sev tameta nu shaak",
+        price: 10,
+        imageUrl:
+            "assets/images/sev-tameta-nu-shaak-recipe-1.jpg",
+        qty: 10,
+        heading: "sev tameta nu shaak",
+        des:
+            "sev tameta nu shaak"
+    },
     // {
     //     name: "Mini Samosa ",
     //     price: 1.5,
@@ -557,7 +567,7 @@ function CartSideNav() {
   <h2 class="color-black">Cart</h2>
   <div class='cart-items StickyContent'></div>
   <div class='final'>
-    <strong class="color-black">Total: RM <span class='total'>0</span> /-</strong>
+    <strong class="color-black">Total: RM <span class='total'>0</span> </strong>
     <div class='action'>
       <button onclick='buy(1)' class='btn buy color-black''>Place Order <i class='fas fa-credit-card' style='color:#6665dd;'></i></button>
       <button onclick='clearCart()' class='btn clear  color-black''>Clear Cart <i class='fas fa-trash' style='color:#bb342f;'></i></button>
@@ -579,7 +589,7 @@ function Purchase() {
     return `
 <div class='invoice color-black'>
   <div class='shipping-items'>
-  <p>Total amount to be paid:</p><span class='pay'>RM ${toPay} /-</span>
+  <p>Total amount to be paid:</p><span class='pay'>RM ${toPay} </span>
   </div>
 <hr>
 <div class="adr-my color-black">
