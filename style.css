@@ -84,9 +84,6 @@ hr{
 	position: absolute;
 	margin: 9px 60px 0px 0px;
 }
-.aling-my{
-	
-}
 
 .banner .stock-limit {
 	position: absolute;
@@ -664,7 +661,7 @@ hr{
 	font-weight: 600;
 }
 
-.btn-ok {
+.btn-ok , .continue-btn{
 	position: absolute;
 	width: 80%;
 	font-size: 1.2rem;

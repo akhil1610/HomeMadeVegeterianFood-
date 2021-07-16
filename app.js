@@ -174,7 +174,7 @@ const productDetails = [
         imageUrl: "assets/images/3.jpeg",
         qty: 15,
         heading: "Pav Bhaji",
-        des:"Pav Bhaji 2pcs."
+        des: "Pav Bhaji 2pcs."
     },
     {
         name: "Bitroot Paratha",
@@ -305,6 +305,19 @@ const productDetails = [
 ];
 const cartDetails = [];
 
+var finalOrderID;
+
+function orderid() {
+
+    var orderId = Math.round(Math.random() * 1000);
+    finalOrderID = orderId;
+}
+
+window.onload = function(){
+
+    orderid();
+}
+
 //click events {
 function addItem(event) {
     let btnClicked =
@@ -429,7 +442,7 @@ function buy(handler) {
         : "";
 }
 function gotowhatsapp() {
-    let orderId;
+   
     let CName = document.getElementById("CName").value;
     let CAddress = document.getElementById("CAddress").value;
     let deliveryOpt = document.querySelector('input[name="d"]:checked').value
@@ -440,14 +453,14 @@ function gotowhatsapp() {
     let itemPrices = cartDetails.map((item) => {
         return `RM ${item.price * item.qty}`;
     });
-    var url = "https://wa.me/60173934825?text=" 
-    + "Order No:%20 " + orderId + "%0a"
-    + "Item Name:%20 " + itemNames + "%0a"
-    + "Item Price:%20 " + itemPrices + "%0a"
-    + "Total Amount:%20 " + toPay + "%0a"
-    + "Name:%20 " + CName + "%0a" 
-    + "Address:%20 " + CAddress + "%0a"
-    + "Delivery Type:%20 " + deliveryOpt + "%0a"; 
+    var url = "https://wa.me/60173934825?text="
+        + "Order No:%20 " + finalOrderID + "%0a"
+        + "Item Name:%20 " + itemNames + "%0a"
+        + "Item Price:%20 " + itemPrices + "%0a"
+        + "Total Amount:%20 " + toPay + "%0a"
+        + "Name:%20 " + CName + "%0a"
+        + "Address:%20 " + CAddress + "%0a"
+        + "Delivery Type:%20 " + deliveryOpt + "%0a";
     let invoice = document.getElementsByClassName("invoice")[0];
     invoice.style.height = "500px";
     invoice.style.width = "400px";
@@ -462,18 +475,22 @@ function order() {
 }
 
 function okay(event) {
+    debugger
     let container = document.getElementsByClassName("invoice")[0];
     if (event.target.innerText == "continue") {
         container.style.display = "none";
         document.getElementsByClassName("purchase-cover")[0].style.display = "none";
     } else {
-        event.target.innerText = "continue";
+        // event.target.innerText = "continue";
+        event.target.style.display = "none";
+        document.getElementsByClassName('continue-btn')[0].style.display = "block";
         event.target.parentElement.getElementsByClassName(
             "order-details"
         )[0].innerHTML = `<em class='thanks'>Thanks for shopping with us</em>`;
         container.style.height = "180px";
     }
 }
+
 //}
 
 // button components for better Ux {
@@ -595,22 +612,21 @@ function Purchase() {
   </div>
 <hr>
 <div class="adr-my color-black">
-<label class="be" for="fname">Name:</label>
-<input id="CName" class="bf CName" type="text" name="fname"><br><br>
-<label class="be" for="fname">Full Address:</label>
-<textarea id="CAddress" class="bg CAddress" rows="4" cols="50" placeholder="Enter address..."></textarea>
-<form>
- <span>Delivery Type</span><br/>
-
-  <input type="radio" id="d1" name="d" value="Home Delivery">
-  <label for="age1">Delivery</label><br>
-  &nbsp;
-  <input type="radio" id="d2" name="d" value="Self-Pick-Up">
-  <label for="d2">Self-Pick-Up</label><br>  
-  &nbsp;
-  <input type="radio" id="d3" name="d" value="Appoinment">
-  <label for="d3">Appoinment</label><br><br>
-</form>
+        <label class="be" for="fname">Name:</label>
+    <input id="CName" class="bf CName" type="text" name="fname"  required><br><br>
+    <label class="be" for="fname">Full Address:</label>
+    <textarea id="CAddress" class="bg CAddress" rows="4" cols="50" placeholder="Enter address..."  required></textarea>
+    <form>
+        <span>Delivery Type</span><br/>
+        <input type="radio" id="d1" name="d" value="Home Delivery">
+        <label for="age1">Delivery</label><br>
+        &nbsp;
+        <input type="radio" id="d2" name="d" value="Self-Pick-Up">
+        <label for="d2">Self-Pick-Up</label><br>  
+        &nbsp;
+        <input type="radio" id="d3" name="d" value="Appoinment">
+        <label for="d3">Appoinment</label><br><br>
+    </form>
 </div>
   <div class='order color-black'>
     <button onclick='order()' class='btn-order btn'>Order Now</button>
@@ -622,9 +638,10 @@ function Purchase() {
 <div class='items-price'>${itemPrices.join("+")}</div> */}
 
 function OrderConfirm() {
-    var orderId = Math.round(Math.random() * 1000);
+    let orderId = finalOrderID;
+
     // let totalCost = document.getElementsByClassName("total")[0].innerText;
-    return `
+    return`
 <div>
   <div class='order-details'>
     <em>your order has been placed</em>
@@ -632,13 +649,16 @@ function OrderConfirm() {
     
     </div>
   <button onclick='okay(event)' class='btn-ok'>okay</button>
+  <button type="button" onclick="continueBtn()" class="continue-btn" style="display:none">Continue</button>
 </div>`;
 }
 //}
-{/* <p>You can provide delivery address on whatsapp number below order details.</p> */}
-{/* <p>You can pay <span>$ ${totalCost}</span> by card or any online transaction method after the delivery.</p> */}
-  
+{/* <p>You can provide delivery address on whatsapp number below order details.</p> */ }
+{/* <p>You can pay <span>$ ${totalCost}</span> by card or any online transaction method after the delivery.</p> */ }
 
+function continueBtn(){
+    window.location.reload()
+}
 //updates Ui components {
 function DisplayProducts() {
     let products = productDetails.map((product) => {
