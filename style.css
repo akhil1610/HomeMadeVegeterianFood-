@@ -573,9 +573,10 @@ hr{
 
 .invoice .order {
 	position: absolute;
-	bottom: 10%;
-	width: 40%;
-	justify-content: space-around;
+    bottom: 10%;
+    width: 36%;
+    margin: 0 0px 3px 15px;
+    justify-content: space-around;
 }
 
 .invoice .order .btn {

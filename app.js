@@ -29,26 +29,26 @@ const productDetails = [
         des:
             "Aloo Vada"
     },
-    {
-        name: "Mini Samosa ",
-        price: 1.5,
-        imageUrl:
-            "assets/images/mini-samos.png",
-        qty: 10,
-        heading: "Mini Samosa",
-        des:
-            "Mini Samosa"
-    },
-    {
-        name: "Matar Samosa",
-        price: 1.5,
-        imageUrl:
-            "assets/images/maxresdefault.jpg",
-        qty: 10,
-        heading: "Matar Samosa",
-        des:
-            "Matar Samosa"
-    },
+    // {
+    //     name: "Mini Samosa ",
+    //     price: 1.5,
+    //     imageUrl:
+    //         "assets/images/mini-samos.png",
+    //     qty: 10,
+    //     heading: "Mini Samosa",
+    //     des:
+    //         "Mini Samosa"
+    // },
+    // {
+    //     name: "Matar Samosa",
+    //     price: 1.5,
+    //     imageUrl:
+    //         "assets/images/maxresdefault.jpg",
+    //     qty: 10,
+    //     heading: "Matar Samosa",
+    //     des:
+    //         "Matar Samosa"
+    // },
     {
         name: "Cheese Corn Tikki",
         price: 5,
