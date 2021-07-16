@@ -472,7 +472,7 @@ function CartItems(cartItem = {}) {
     let { name, price, imgSrc, qty } = cartItem;
     return `
  
-<div class='cart-item StickyContent '>
+<div class='cart-item  '>
   <div class='cart-img color-black' >
     <img src='${imgSrc}' alt='' />
   </div>
@@ -513,7 +513,7 @@ function CartSideNav() {
 <div class='side-nav'>
   <button onclick='sideNav(0)'  class="color-black"><i class='fas fa-times'></i></button>
   <h2 class="color-black">Cart</h2>
-  <div class='cart-items'></div>
+  <div class='cart-items StickyContent'></div>
   <div class='final'>
     <strong class="color-black">Total: RM <span class='total'>0</span>.00/-</strong>
     <div class='action'>

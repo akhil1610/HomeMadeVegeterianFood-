@@ -377,7 +377,7 @@ hr{
 
 .details .purchase .add-btn {
 	border-radius: 20px;
-	border: 1px solid white;
+	border: 1.5px solid white;
 	background: none;
 	color: white;
 	padding: 6px 10px;
@@ -389,7 +389,7 @@ hr{
 }
 
 .main-cart .card:hover {
-	height: 400px;
+	height: 350px;
 	width: 200px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
