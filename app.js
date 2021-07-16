@@ -381,6 +381,7 @@ function buy(handler) {
 function gotowhatsapp() {
     let CName = document.getElementById("CName").value;
     let CAddress = document.getElementById("CAddress").value;
+    let deliveryOpt = document.querySelector('input[name="d"]:checked').value
     let toPay = document.getElementsByClassName("total")[0].innerText;
     let itemNames = cartDetails.map((item) => {
         return `${item.qty} x ${item.name}`;
@@ -393,7 +394,8 @@ function gotowhatsapp() {
     + "Item Price: " + itemPrices + "%0a"
     + "Total Amount: " + toPay + "%0a"
     + "Name: " + CName + "%0a" 
-    + "Address: " + CAddress + "%0a"; 
+    + "Address: " + CAddress + "%0a"
+    + "Delivery Type: " + deliveryOpt + "%0a"; 
     let invoice = document.getElementsByClassName("invoice")[0];
     invoice.style.height = "500px";
     invoice.style.width = "400px";
@@ -515,7 +517,7 @@ function CartSideNav() {
   <h2 class="color-black">Cart</h2>
   <div class='cart-items StickyContent'></div>
   <div class='final'>
-    <strong class="color-black">Total: RM <span class='total'>0</span>.00/-</strong>
+    <strong class="color-black">Total: RM <span class='total'>0</span> /-</strong>
     <div class='action'>
       <button onclick='buy(1)' class='btn buy color-black''>Place Order <i class='fas fa-credit-card' style='color:#6665dd;'></i></button>
       <button onclick='clearCart()' class='btn clear  color-black''>Clear Cart <i class='fas fa-trash' style='color:#bb342f;'></i></button>
@@ -541,10 +543,22 @@ function Purchase() {
   </div>
 <hr>
 <div class="adr-my color-black">
-<label class="be" for="fname">First name:</label>
+<label class="be" for="fname">Name:</label>
 <input id="CName" class="be CName" type="text" name="fname"><br><br>
 <label class="be" for="fname">Full Address:</label>
 <textarea id="CAddress" class="be CAddress" rows="4" cols="50" placeholder="Enter adress..."></textarea>
+<form>
+ <span>Delivery Type</span><br/>
+
+  <input type="radio" id="d1" name="d" value="Home Delivery">
+  <label for="age1">Delivery</label><br>
+  &nbsp;
+  <input type="radio" id="d2" name="d" value="Self-Pick-Up">
+  <label for="d2">Self-Pick-Up</label><br>  
+  &nbsp;
+  <input type="radio" id="d3" name="d" value="Appoinment">
+  <label for="d3">Appoinment</label><br><br>
+</form>
 </div>
   <div class='order color-black'>
     <button onclick='order()' class='btn-order btn'>Order Now</button>
