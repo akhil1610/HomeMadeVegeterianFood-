@@ -678,6 +678,13 @@ hr{
 	.side-nav {
 		width: 100%;
 	}
+	/* .be {
+		margin: 5px 10px 0px 10px;
+		font-weight: bolder;
+		width: 230px;
+		font-size: x-large;
+		border-radius: 10px;
+	} */
 	.side-nav .cart-img {
 		display: none;
 	}
@@ -705,4 +712,13 @@ hr{
 	.main-cart .card {
 		margin: 20px auto;
 	}
+}
+@media (max-width: 425px) {
+	.be {
+		margin: 5px 10px 0px 10px;
+		font-weight: bolder;
+		width: 90%;
+		font-size: x-large;
+		border-radius: 10px;
+	} 
 }
