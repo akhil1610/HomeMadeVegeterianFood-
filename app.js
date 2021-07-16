@@ -59,6 +59,16 @@ const productDetails = [
         des:
             "Puran poli 10pcs"
     },
+    {
+        name: "Dahi Vada",
+        price: 10,
+        imageUrl:
+            "assets/images/Dahivada.jpeg",
+        qty: 10,
+        heading: "Dahi Vada",
+        des:
+            "Dahivada 1plate"
+    },
     // {
     //     name: "Mini Samosa ",
     //     price: 1.5,
