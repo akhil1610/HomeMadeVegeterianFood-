@@ -31,7 +31,7 @@ const productDetails = [
     },
     {
         name: "Veg Biryani",
-        price: 1.5,
+        price: 8,
         imageUrl:
             "assets/images/vegbiryani.jpg",
         qty: 10,
