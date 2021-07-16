@@ -29,7 +29,10 @@ button {
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
-
+hr{
+	color: black;
+	background-color: black;
+}
 .banner {
 	position: relative;
 	height: 100vh;
@@ -50,12 +53,13 @@ button {
 .be{
 	margin: 5px 10px 0px 10px;
     font-weight: bolder;
-	font-size: x-large;
+    font-size: x-large;
+    border-radius: 10px;
 }
 .StickyContent {
 	flex: 1 1 auto;
 	overflow-y: scroll;
-	background: green;
+	background: rgb(255, 255, 255);
   }
   .color-black{
 	  color: black;
@@ -504,8 +508,8 @@ button {
 }
 
 .side-nav .final .action .btn:hover {
-	color: black;
-	box-shadow: inset 20em 0 0 0 rgb(0, 0, 0);
+	color: #ffffff;
+    box-shadow: inset 20em 0 0 0 #404040;
 }
 
 .qty-change {
@@ -516,7 +520,7 @@ button {
 }
 
 .btn-qty {
-	border: 1px solid white;
+	border: 1px solid rgb(0, 0, 0);
 	border-radius: 50%;
 	padding: 2px 5px;
 }
@@ -534,7 +538,7 @@ button {
 	position: absolute;
 	height: 90%;
 	width: 90%;
-	background: rgba(0, 0, 0, 0.95);
+	background: rgba(255, 255, 255, 0.95);
 	padding: 5% 4%;
 	margin: 0 auto;
 	left: 0;
@@ -581,11 +585,27 @@ button {
 }
 
 .invoice .order .btn-order {
-	background: #00bbf9;
+	font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: 1px solid rgb(0, 0, 0);
+    margin-right: 20px;
+    border-radius: 10px;
+	color: black;
+	/* background: #00bbf9; */
+}
+.invoice .order .btn-order:hover {    
+	color: #ffffff;
+    box-shadow: inset 20em 0 0 0 #404040;
+	
 }
 
 .invoice .order .btn-cancel {
 	background: #bb342f;
+	color: rgb(255, 255, 255);
+}
+.invoice .order .btn-cancel:hover {
+	background: #bb342f;
+	color: rgb(189, 189, 189);
 }
 
 .invoice .order-details {

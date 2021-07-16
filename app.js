@@ -433,10 +433,10 @@ function AddBtn() {
 function QtyBtn(qty = 1) {
     if (qty == 0) return AddBtn();
     return `
-<div>
-  <button class='btn-qty' onclick="qtyChange(this,'sub')"><i class='fas fa-chevron-left'></i></button>
+<div >
+  <button class='btn-qty color-black' onclick="qtyChange(this,'sub')"><i class='fas fa-chevron-left'></i></button>
   <p class='qty'>${qty}</p>
-  <button class='btn-qty' onclick="qtyChange(this,'add')"><i class='fas fa-chevron-right'></i></button>
+  <button class='btn-qty color-black' onclick="qtyChange(this,'add')"><i class='fas fa-chevron-right'></i></button>
 </div>`;
 }
 //}
@@ -473,13 +473,13 @@ function CartItems(cartItem = {}) {
     return `
  
 <div class='cart-item StickyContent '>
-  <div class='cart-img'>
+  <div class='cart-img color-black' >
     <img src='${imgSrc}' alt='' />
   </div>
-  <strong class='name'>${name}</strong>
-  <span class='qty-change'>${QtyBtn(qty)}</span>
-  <p class='price'>RM ${price * qty}</p>
-  <button onclick='removeItem(this)'><i class='fas fa-trash'></i></button>
+  <strong class='name color-black'>${name}</strong>
+  <span class='qty-change color-black'>${QtyBtn(qty)}</span>
+  <p class='price color-black'>RM ${price * qty}</p>
+  <button onclick='removeItem(this)' class="color-black"><i class='fas fa-trash'></i></button>
 </div>
 `;
 }
@@ -535,18 +535,18 @@ function Purchase() {
         return `<span>RM ${item.price * item.qty}</span>`;
     });
     return `
-<div class='invoice'>
+<div class='invoice color-black'>
   <div class='shipping-items'>
   <p>total amount to be paid:</p><span class='pay'>RM ${toPay}</span>
   </div>
 <hr>
-<div class="adr-my">
+<div class="adr-my color-black">
 <label class="be" for="fname">First name:</label>
 <input id="CName" class="be CName" type="text" name="fname"><br><br>
 <label class="be" for="fname">Full Address:</label>
 <textarea id="CAddress" class="be CAddress" rows="4" cols="50" placeholder="Enter adress..."></textarea>
 </div>
-  <div class='order'>
+  <div class='order color-black'>
     <button onclick='order()' class='btn-order btn'>Order Now</button>
     <button onclick='buy(0)' class='btn-cancel btn'>Cancel</button>
   </div>
