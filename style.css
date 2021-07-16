@@ -53,8 +53,19 @@ hr{
 .be{
 	margin: 5px 10px 0px 10px;
     font-weight: bolder;
-    font-size: x-large;
+    font-size: 18px;
     border-radius: 10px;
+}
+.bf{
+	margin: 5px 10px 0px 10px;
+    font-weight: bolder;
+    height: 30px;
+    font-size: initial;
+}
+.bg{
+	margin: 5px 10px 0px 10px;
+    font-weight: bolder;
+	font-size: initial;
 }
 .StickyContent {
 	flex: 1 1 auto;
@@ -560,6 +571,10 @@ hr{
 	flex-direction: column;
 	justify-content: space-around;
 }
+.pay{
+	font-weight: bold;
+    margin: 0 10px 0 0;
+}
 
 .invoice .payment {
 	flex-direction: column;
@@ -576,7 +591,7 @@ hr{
     bottom: 10%;
     width: 36%;
     margin: 0 0px 3px 15px;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 .invoice .order .btn {

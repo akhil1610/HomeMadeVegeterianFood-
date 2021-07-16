@@ -29,6 +29,36 @@ const productDetails = [
         des:
             "Aloo Vada"
     },
+    {
+        name: "Veg Biryani",
+        price: 1.5,
+        imageUrl:
+            "assets/images/vegbiryani.jpg",
+        qty: 10,
+        heading: "Veg Biryani",
+        des:
+            "Veg Biryani"
+    },
+    {
+        name: "Puran poli",
+        price: 6,
+        imageUrl:
+            "assets/images/puran-poli.jpg",
+        qty: 10,
+        heading: "Puran poli",
+        des:
+            "Puran poli 2pcs"
+    },
+    {
+        name: "Puran poli",
+        price: 25,
+        imageUrl:
+            "assets/images/puran-poli.jpg",
+        qty: 10,
+        heading: "Puran poli",
+        des:
+            "Puran poli 10pcs"
+    },
     // {
     //     name: "Mini Samosa ",
     //     price: 1.5,
@@ -51,7 +81,7 @@ const productDetails = [
     // },
     {
         name: "Cheese Corn Tikki",
-        price: 5,
+        price: 6,
         imageUrl:
             "assets/images/CheeseCornTikki.jpg",
         qty: 10,
@@ -61,7 +91,7 @@ const productDetails = [
     },
     {
         name: "Paneer Tikki",
-        price: 5,
+        price: 6,
         imageUrl:
             "assets/images/Paneer_Tikkis.jpg",
         qty: 10,
@@ -71,23 +101,23 @@ const productDetails = [
     },
     {
         name: "Aloo Tikki",
-        price: 1,
+        price: 1.5,
         imageUrl:
             "assets/images/Aloo-Tikki.jpg",
         qty: 10,
         heading: "Aloo Tikki",
         des:
-            "Aloo Tikki"
+            "Aloo Tikki 1pcs"
     },
     {
-        name: "Chinese Spring Roll",
-        price: 1.5,
+        name: "Cheese Spring Roll",
+        price: 2,
         imageUrl:
             "assets/images/Chinese-Spring-Roll.jpg",
         qty: 10,
-        heading: "Chinese Spring Roll",
+        heading: "Cheese Spring Roll",
         des:
-            "Chinese Spring Roll"
+            "Cheese Spring Roll 1pcs"
     },
     {
         name: "Khajoor Roll",
@@ -111,7 +141,7 @@ const productDetails = [
     },
     {
         name: "Methi thepla",
-        price: 1.5,
+        price: 2,
         imageUrl: "assets/images/2.jpeg",
         qty: 15,
         heading: "Methi thepla",
@@ -120,7 +150,7 @@ const productDetails = [
     },
     {
         name: "Pav Bhaji",
-        price: 10,
+        price: 8,
         imageUrl: "assets/images/3.jpeg",
         qty: 15,
         heading: "Pav Bhaji",
@@ -146,25 +176,25 @@ const productDetails = [
     },
     {
         name: "Beetroot Halwa",
-        price: 10,
+        price: 40,
         imageUrl: "assets/images/6.jpeg",
         qty: 15,
         heading: "Beetroot Halwa",
         des:
-            "Beetroot Halwa 50gm"
+            "Beetroot Halwa 500gm"
     },
     {
         name: "Vada pav",
-        price: 10,
+        price: 7,
         imageUrl: "assets/images/7.jpeg",
         qty: 15,
         heading: "Vada pav",
         des:
-            "Vada pav 2pcs"
+            "Vada pav 1pcs"
     },
     {
         name: "Puri",
-        price: 15,
+        price: 20,
         imageUrl: "assets/images/8.jpeg",
         qty: 15,
         heading: "Puri",
@@ -178,7 +208,7 @@ const productDetails = [
         qty: 15,
         heading: "dabeli",
         des:
-            "dabeli"
+            "dabeli 1pcs"
     },
     {
         name: "Crispi Bhakhri",
@@ -191,12 +221,12 @@ const productDetails = [
     },
     {
         name: "Ragda Petis",
-        price: 7,
+        price: 8,
         imageUrl: "assets/images/11.jpeg",
         qty: 35,
         heading: "Ragda Petis",
         des:
-            "Ragda Petis"
+            "Ragda Petis 1pcs"
     },
     {
         name: "Gulab Jamun",
@@ -241,7 +271,7 @@ const productDetails = [
         qty: 35,
         heading: "Methi Papad",
         des:
-            "Methi Papad."
+            "Methi Papad 1pcs."
     },
     {
         name: "Chili Pokoda",
@@ -539,14 +569,14 @@ function Purchase() {
     return `
 <div class='invoice color-black'>
   <div class='shipping-items'>
-  <p>total amount to be paid:</p><span class='pay'>RM ${toPay}</span>
+  <p>Total amount to be paid:</p><span class='pay'>RM ${toPay} /-</span>
   </div>
 <hr>
 <div class="adr-my color-black">
 <label class="be" for="fname">Name:</label>
-<input id="CName" class="be CName" type="text" name="fname"><br><br>
+<input id="CName" class="bf CName" type="text" name="fname"><br><br>
 <label class="be" for="fname">Full Address:</label>
-<textarea id="CAddress" class="be CAddress" rows="4" cols="50" placeholder="Enter address..."></textarea>
+<textarea id="CAddress" class="bg CAddress" rows="4" cols="50" placeholder="Enter address..."></textarea>
 <form>
  <span>Delivery Type</span><br/>
 
